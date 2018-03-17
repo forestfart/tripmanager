@@ -12,4 +12,11 @@ public class TripManagerTest {
 		trip.addPhoto(new Photo());
 		assertEquals(trip.getPhotos().size(), 1);
 	}
+	
+	@Test
+	public void testGetComments() {
+		Photo photo = new Photo();
+		photo.addComment("This is the comment made for testing purposes.");
+		assertEquals(photo.getComments().size(), 1);
+	}
 }
