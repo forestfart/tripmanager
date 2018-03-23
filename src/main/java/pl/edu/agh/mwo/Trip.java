@@ -1,5 +1,6 @@
 package pl.edu.agh.mwo;
 
+import java.awt.font.ImageGraphicAttribute;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -26,5 +27,9 @@ public class Trip {
 
 	public String getDescription() {
 		return description;
+	}
+
+	public String getTripName() {
+		return tripName;
 	}
 }

@@ -21,4 +21,14 @@ public class TripManager {
 	public void removeTrip(Trip trip) {
 		tripsList.remove(trip);
 	}
+
+	public List<Trip> findTrip(final String tripName) {
+		List<Trip> foundTrips = new ArrayList<>();
+		for (Trip trip : tripsList) {
+			if (trip.getTripName().equals(tripName)) {
+				foundTrips.add(trip);
+			}
+		}
+		return foundTrips;
+	}
 }
