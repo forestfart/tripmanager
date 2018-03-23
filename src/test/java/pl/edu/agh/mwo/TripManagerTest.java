@@ -45,7 +45,7 @@ public class TripManagerTest {
 	}
 
 	@Test
-	public void testAddtrip() {
+	public void testAddTrip() {
 		// Given
 		TripManager tripManager = new TripManager();
 		Trip trip = new Trip("");
@@ -55,5 +55,19 @@ public class TripManagerTest {
 
 		// Then
 		assertEquals(1, tripManager.getTrips().size());
+	}
+
+	@Test
+	public void testRemoveTrip() {
+		// Given
+		TripManager tripManager = new TripManager();
+		Trip trip = new Trip("");
+		tripManager.addTrip(trip);
+
+		// When
+		tripManager.removeTrip(trip);
+
+		// Then
+		assertEquals(0, tripManager.getTrips().size());
 	}
 }

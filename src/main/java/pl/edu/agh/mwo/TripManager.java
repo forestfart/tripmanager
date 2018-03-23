@@ -1,6 +1,5 @@
 package pl.edu.agh.mwo;
 
-import java.io.CharArrayWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,5 +16,9 @@ public class TripManager {
 
 	public List<Trip> getTrips() {
 		return tripsList;
+	}
+
+	public void removeTrip(Trip trip) {
+		tripsList.remove(trip);
 	}
 }
